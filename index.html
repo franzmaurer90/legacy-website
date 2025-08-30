@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legacy and Life Journals - Premium Journals for Life's Most Important Moments</title>
-    <meta name="description" content="Discover premium journals designed to capture your life's precious memories, track personal growth, and create lasting legacies for future generations.">
+    <title>Legacy & Life Journals - Premium Leather Journals, Gratitude Diaries & Mindfulness Planners for Personal Growth</title>
+    <meta name="description" content="Discover premium leather journals, gratitude diaries, and mindfulness planners. Handcrafted journaling books for personal growth, self-reflection, and creating lasting memories. Free shipping on orders over $50.">
+    <meta name="keywords" content="leather journal, gratitude journal, mindfulness planner, personal diary, memory book, goal setting journal, daily planner, journaling, self-reflection, personal growth, handmade journal, premium notebooks, writing diary, life planner, meditation journal">
+    <meta name="author" content="Legacy & Life Journals">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://legacyandlifejournals.com">
+    <meta property="og:title" content="Legacy & Life Journals - Premium Journaling for Personal Growth">
+    <meta property="og:description" content="Handcrafted leather journals and mindfulness planners for self-reflection and personal growth. Start your journaling journey today.">
+    <meta property="og:image" content="https://legacyandlifejournals.com/logo.png">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Legacy & Life Journals",
+        "url": "https://legacyandlifejournals.com",
+        "logo": "https://legacyandlifejournals.com/IMG_8522.jpg",
+        "description": "Premium leather journals and mindfulness planners for personal growth and self-reflection"
+    }
+    </script>
+
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #e74c3c;
+            --text-light: #7f8c8d;
+            --background: #fefefe;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --border-light: #ecf0f1;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,213 +46,188 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Georgia', 'Times New Roman', serif;
             line-height: 1.7;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
+            color: var(--primary-color);
+            background: var(--background);
+            font-size: 16px;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
+        }
+
+        /* Header with Logo */
+        .header {
+            background: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-light);
+            margin-bottom: 60px;
         }
 
         .logo {
-            max-width: 120px;
+            max-width: 180px;
             height: auto;
-            margin: 0 auto 30px;
-            display: block;
-            filter: brightness(0) invert(1);
+            margin-bottom: 20px;
         }
 
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        /* Hero Section */
         .hero {
             text-align: center;
             padding: 80px 0;
-            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(52, 73, 94, 0.85)), 
-                        url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            border-radius: 25px;
-            margin-bottom: 60px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.3;
-            z-index: -1;
+            margin-bottom: 100px;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 25px;
+            font-size: 3.2rem;
             font-weight: 300;
-            letter-spacing: -1px;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
         }
 
         .hero .subtitle {
-            font-size: 1.4rem;
-            margin-bottom: 35px;
-            opacity: 0.9;
-            font-style: italic;
-        }
-
-        .hero .description {
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            opacity: 0.8;
-            line-height: 1.8;
-        }
-
-        .cta-primary {
-            display: inline-block;
-            background: linear-gradient(45deg, #e74c3c, #c0392b);
-            color: white;
-            text-decoration: none;
-            padding: 18px 40px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
-        }
-
-        .cta-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(231, 76, 60, 0.4);
-        }
-
-        .section {
-            margin: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            color: #2c3e50;
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 40px;
             font-weight: 300;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #7f8c8d;
-            margin-bottom: 60px;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .story-section {
-            background: white;
-            padding: 60px 50px;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-            margin-bottom: 40px;
+        .cta-primary {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--white);
+            text-decoration: none;
+            padding: 18px 40px;
+            border-radius: 3px;
+            font-size: 1rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
 
-        .story-content {
-            max-width: 800px;
-            margin: 0 auto;
+        .cta-primary:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        /* Section Styling */
+        .section {
+            margin: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 80px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* About Section - Scandinavian Style */
+        .about-section {
+            background: var(--light-gray);
+            padding: 100px 0;
+            margin: 100px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 3px;
+        }
+
+        .about-content h2 {
+            font-size: 2.2rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        .about-content p {
             font-size: 1.1rem;
             line-height: 1.8;
-        }
-
-        .story-content p {
+            color: var(--secondary-color);
             margin-bottom: 25px;
         }
 
-        .story-content .highlight {
-            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-weight: 500;
-        }
-
+        /* Products Grid - Minimalist */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin: 60px 0;
+            gap: 60px;
+            margin: 80px 0;
+        }
+
+        .product-card {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 3px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
         }
 
         .product-image {
             width: 100%;
-            height: 220px;
-            border-radius: 15px;
-            margin-bottom: 20px;
+            height: 280px;
             object-fit: cover;
-            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
         }
 
-        .product-card {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .product-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-        }
-
-        .product-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
-        }
-
-        .product-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 25px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            color: white;
+        .product-content {
+            padding: 40px 30px;
         }
 
         .product-title {
-            font-size: 1.6rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #2c3e50;
-            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+            color: var(--primary-color);
         }
 
         .product-description {
-            color: #555;
+            color: var(--text-light);
             margin-bottom: 25px;
-            line-height: 1.7;
-            text-align: center;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         .product-features {
@@ -228,493 +236,520 @@
         }
 
         .product-features li {
-            padding: 8px 0;
-            padding-left: 25px;
+            padding: 5px 0;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
             position: relative;
-            color: #666;
+            padding-left: 20px;
         }
 
         .product-features li::before {
-            content: "✓";
+            content: "•";
             position: absolute;
             left: 0;
-            color: #27ae60;
+            color: var(--accent-color);
             font-weight: bold;
         }
 
         .product-price {
-            text-align: center;
-            font-size: 2rem;
-            font-weight: bold;
-            color: #e74c3c;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--accent-color);
             margin-bottom: 25px;
         }
 
         .cta-button {
             display: block;
-            background: linear-gradient(45deg, #3498db, #2980b9);
-            color: white;
+            width: 100%;
+            background: var(--primary-color);
+            color: var(--white);
             text-decoration: none;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-weight: 600;
+            padding: 15px 20px;
+            border-radius: 3px;
             text-align: center;
-            transition: all 0.3s ease;
+            font-weight: 400;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
         }
 
         .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+            background: var(--secondary-color);
         }
 
-        .testimonials {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            padding: 80px 50px;
-            border-radius: 25px;
-            color: white;
-            text-align: center;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        .testimonial {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        .testimonial-author {
-            font-weight: bold;
-            opacity: 0.9;
-        }
-
-        .why-journals {
-            background: white;
-            padding: 80px 50px;
-            border-radius: 25px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        /* Benefits Section */
+        .benefits {
+            background: var(--white);
+            padding: 100px 0;
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
         }
 
         .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
+            gap: 60px;
+            margin-top: 60px;
         }
 
         .benefit-item {
             text-align: center;
-            padding: 30px 20px;
         }
 
         .benefit-icon {
-            width: 70px;
-            height: 70px;
-            margin: 0 auto 20px;
-            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 25px;
+            background: var(--light-gray);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.8rem;
+            color: var(--primary-color);
         }
 
         .benefit-title {
-            font-size: 1.4rem;
-            font-weight: 600;
+            font-size: 1.2rem;
+            font-weight: 400;
             margin-bottom: 15px;
-            color: #2c3e50;
+            color: var(--primary-color);
         }
 
         .benefit-description {
-            color: #666;
+            color: var(--text-light);
+            font-size: 0.95rem;
             line-height: 1.6;
         }
 
+        /* Footer */
         .footer {
-            text-align: center;
+            background: var(--primary-color);
+            color: var(--white);
             padding: 60px 0 40px;
-            color: #7f8c8d;
+            text-align: center;
         }
 
         .footer-content {
             max-width: 600px;
             margin: 0 auto;
-            line-height: 1.8;
+            line-height: 1.6;
         }
 
+        .footer p {
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .footer-small {
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
             }
             
-            .hero .subtitle {
-                font-size: 1.2rem;
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
             }
             
-            .section-title {
-                font-size: 2.2rem;
+            .about-image {
+                height: 300px;
             }
             
             .products-grid {
                 grid-template-columns: 1fr;
+                gap: 40px;
             }
             
-            .story-section,
-            .why-journals,
-            .testimonials {
-                padding: 40px 30px;
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
             }
+            
+            .section {
+                margin: 60px 0;
+            }
+            
+            .about-section {
+                padding: 60px 0;
+            }
+        }
+
+        /* SEO Enhancement - Better structure */
+        .breadcrumbs {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .breadcrumbs a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .breadcrumbs a:hover {
+            color: var(--accent-color);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header class="hero">
-            <!-- Tutaj dodasz swoje logo - zamień 'your-logo.png' na link do swojego logo -->
-            <img src="your-logo.png" alt="Legacy and Life Journals Logo" class="logo">
-            <h1>Legacy and Life Journals</h1>
-            <p class="subtitle">Where Memories Become Treasures</p>
-            <p class="description">
-                Transform your daily thoughts, dreams, and experiences into a beautiful legacy. 
-                Our premium journals are designed to capture life's most precious moments and 
-                help you create meaningful connections across generations.
-            </p>
-            <a href="#products" class="cta-primary">Discover Your Perfect Journal</a>
-        </header>
+    <!-- Header with Logo -->
+    <header class="header">
+        <div class="container">
+            <img src="logo.png" alt="Legacy & Life Journals - Premium Leather Journals and Mindfulness Planners" class="logo">
+            <p class="tagline">Handcrafted Journals for Mindful Living</p>
+        </div>
+    </header>
 
-        <section class="section">
-            <div class="story-section">
-                <div class="story-content">
-                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Person writing in journal" style="width: 100%; max-width: 500px; height: 300px; object-fit: cover; border-radius: 15px; margin: 0 auto 40px; display: block; box-shadow: 0 15px 40px rgba(0,0,0,0.1);">
-                    <h2 style="text-align: center; margin-bottom: 30px; font-size: 2.2rem; color: #2c3e50;">The Power of Written Words</h2>
-                    <p>
-                        In our fast-paced digital world, there's something magical about putting pen to paper. 
-                        <span class="highlight">Journaling isn't just writing—it's a conversation with yourself</span>, 
-                        a way to process emotions, capture fleeting moments, and create a tangible record of your journey through life.
-                    </p>
-                    <p>
-                        Studies have shown that regular journaling can reduce stress, improve mental clarity, 
-                        and enhance emotional well-being. But beyond the personal benefits, your journal becomes 
-                        <span class="highlight">a precious gift for future generations</span>—a window into who you were, 
-                        what you believed, and how you saw the world.
-                    </p>
-                    <p>
-                        Whether you're documenting daily gratitude, tracking personal growth, planning your dreams, 
-                        or simply recording the beautiful ordinary moments of life, the right journal makes all the difference. 
-                        That's why we've carefully curated a collection of premium journals, each designed for a specific 
-                        purpose and crafted to last a lifetime.
-                    </p>
+    <div class="container">
+        <!-- Breadcrumbs for SEO -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a> / <span>Premium Journals & Planners</span>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Create Your Legacy Through Mindful Journaling</h1>
+            <p class="subtitle">
+                Discover the transformative power of writing with our collection of handcrafted leather journals, 
+                gratitude diaries, and mindfulness planners designed for personal growth and self-reflection.
+            </p>
+            <a href="#journals" class="cta-primary">Shop Premium Journals</a>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h2>Our Story & Mission</h2>
+                        <p>
+                            Legacy & Life Journals was born from a simple belief: that everyone has a story worth preserving. 
+                            Founded in 2020 by two friends who discovered the life-changing power of daily journaling during 
+                            challenging times, we've dedicated ourselves to creating the finest writing companions for your journey.
+                        </p>
+                        <p>
+                            Our mission is to help you cultivate mindfulness, track personal growth, and create meaningful 
+                            connections with yourself and future generations. Each journal is carefully crafted with 
+                            premium materials and thoughtful design, ensuring your words are preserved for years to come.
+                        </p>
+                        <p>
+                            We believe that writing by hand slows down time, deepens reflection, and creates space for 
+                            authentic self-discovery. In our digital age, our journals offer a sanctuary for your thoughts, 
+                            dreams, and aspirations—a place where your inner voice can flourish.
+                        </p>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Handcrafted leather journals and writing materials on wooden desk" class="about-image">
                 </div>
             </div>
         </section>
 
-        <section class="section" id="products">
+        <!-- Products Section -->
+        <section class="section" id="journals">
             <h2 class="section-title">Premium Journal Collection</h2>
             <p class="section-subtitle">
-                Each journal is thoughtfully designed to inspire and guide your writing journey
+                Each journal is thoughtfully designed to support different aspects of your personal growth journey
             </p>
 
             <div class="products-grid">
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Luxury leather journal" class="product-image">
-                    <h3 class="product-title">The Legacy Journal</h3>
-                    <p class="product-description">
-                        A beautifully bound leather journal designed for life's most important stories. 
-                        Perfect for family histories, milestone celebrations, and creating treasured memories.
-                    </p>
-                    <ul class="product-features">
-                        <li>Premium leather binding with gold embossing</li>
-                        <li>Thick, cream-colored acid-free paper</li>
-                        <li>Guided prompts for family stories</li>
-                        <li>Ribbon bookmark and elastic closure</li>
-                        <li>Gift box included</li>
-                    </ul>
-                    <div class="product-price">$45.99</div>
-                    <a href="https://amazon.com" class="cta-button" target="_blank">
-                        View on Amazon
-                    </a>
-                </div>
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Premium leather bound journal for family legacy stories" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">The Heritage Leather Journal</h3>
+                        <p class="product-description">
+                            A timeless leather-bound journal crafted for preserving family stories, milestone celebrations, 
+                            and creating treasured memories that will be cherished for generations.
+                        </p>
+                        <ul class="product-features">
+                            <li>Genuine full-grain leather binding with gold embossing</li>
+                            <li>Thick 120gsm cream-colored acid-free paper</li>
+                            <li>Guided prompts for family history and legacy stories</li>
+                            <li>Silk ribbon bookmark and elastic closure</li>
+                            <li>Premium gift box and care instructions included</li>
+                        </ul>
+                        <div class="product-price">$45.99</div>
+                        <a href="https://amazon.com/dp/example1" class="cta-button" target="_blank">
+                            View on Amazon
+                        </a>
+                    </div>
+                </article>
 
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gratitude journal with flowers" class="product-image">
-                    <h3 class="product-title">Daily Gratitude Companion</h3>
-                    <p class="product-description">
-                        Transform your perspective with this beautifully designed gratitude journal. 
-                        Start and end each day by focusing on life's blessings, big and small.
-                    </p>
-                    <ul class="product-features">
-                        <li>365 days of guided gratitude prompts</li>
-                        <li>Morning and evening reflection spaces</li>
-                        <li>Inspirational quotes throughout</li>
-                        <li>Compact size perfect for bedside</li>
-                        <li>Hardcover with stunning artwork</li>
-                    </ul>
-                    <div class="product-price">$24.99</div>
-                    <a href="https://amazon.com" class="cta-button" target="_blank">
-                        View on Amazon
-                    </a>
-                </div>
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Daily gratitude journal with floral design for mindfulness practice" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">Daily Gratitude & Mindfulness Journal</h3>
+                        <p class="product-description">
+                            Transform your mindset with this beautifully designed gratitude journal featuring daily prompts 
+                            for appreciation, mindfulness exercises, and reflection spaces.
+                        </p>
+                        <ul class="product-features">
+                            <li>365 days of guided gratitude and mindfulness prompts</li>
+                            <li>Morning intention and evening reflection sections</li>
+                            <li>Weekly mindfulness challenges and inspirational quotes</li>
+                            <li>Compact 6x8 inch size perfect for bedside or travel</li>
+                            <li>Hardcover with lay-flat binding for easy writing</li>
+                        </ul>
+                        <div class="product-price">$24.99</div>
+                        <a href="https://amazon.com/dp/example2" class="cta-button" target="_blank">
+                            View on Amazon
+                        </a>
+                    </div>
+                </article>
 
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Goal planning journal with pen" class="product-image">
-                    <h3 class="product-title">Dreams & Goals Planner</h3>
-                    <p class="product-description">
-                        More than a planner—it's your roadmap to success. Track goals, celebrate victories, 
-                        and turn your biggest dreams into achievable action plans.
-                    </p>
-                    <ul class="product-features">
-                        <li>12-month goal setting framework</li>
-                        <li>Monthly and weekly progress tracking</li>
-                        <li>Vision board pages</li>
-                        <li>Habit tracker included</li>
-                        <li>Motivational design elements</li>
-                    </ul>
-                    <div class="product-price">$32.99</div>
-                    <a href="https://amazon.com" class="cta-button" target="_blank">
-                        View on Amazon
-                    </a>
-                </div>
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Goal setting and life planning journal with elegant pen" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">Dreams & Goals Life Planner</h3>
+                        <p class="product-description">
+                            More than a planner—your roadmap to success. Features comprehensive goal-setting frameworks, 
+                            progress tracking, and motivational tools to turn dreams into achievements.
+                        </p>
+                        <ul class="product-features">
+                            <li>12-month goal setting and life planning system</li>
+                            <li>Monthly reviews, weekly focus areas, and daily actions</li>
+                            <li>Vision board pages and dream mapping exercises</li>
+                            <li>Habit tracker, milestone celebrations, and reflection prompts</li>
+                            <li>Motivational quotes and success strategies throughout</li>
+                        </ul>
+                        <div class="product-price">$32.99</div>
+                        <a href="https://amazon.com/dp/example3" class="cta-button" target="_blank">
+                            View on Amazon
+                        </a>
+                    </div>
+                </article>
 
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Beautiful mother and baby journal" class="product-image">
-                    <h3 class="product-title">Mother's Memory Keeper</h3>
-                    <p class="product-description">
-                        A special journal for mothers to document the precious moments of parenthood. 
-                        From first steps to first words—capture it all in this beautifully designed keepsake.
-                    </p>
-                    <ul class="product-features">
-                        <li>Milestone tracking pages</li>
-                        <li>Photo spaces for special moments</li>
-                        <li>Monthly growth observations</li>
-                        <li>Soft-touch cover with gold foil</li>
-                        <li>Perfect baby shower gift</li>
-                    </ul>
-                    <div class="product-price">$29.99</div>
-                    <a href="https://amazon.com" class="cta-button" target="_blank">
-                        View on Amazon
-                    </a>
-                </div>
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mother's memory keeping journal for documenting precious parenting moments" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">Mother's Memory Keeper</h3>
+                        <p class="product-description">
+                            A heartwarming journal designed for mothers to document precious parenting moments, 
+                            milestones, and the beautiful journey of watching their children grow.
+                        </p>
+                        <ul class="product-features">
+                            <li>Milestone tracking pages for first words, steps, and achievements</li>
+                            <li>Monthly growth observations and development notes</li>
+                            <li>Photo spaces for capturing special moments</li>
+                            <li>Soft-touch cover with rose gold foil accents</li>
+                            <li>Perfect for baby showers, Mother's Day, or new mom gifts</li>
+                        </ul>
+                        <div class="product-price">$29.99</div>
+                        <a href="https://amazon.com/dp/example4" class="cta-button" target="_blank">
+                            View on Amazon
+                        </a>
+                    </div>
+                </article>
 
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Peaceful mindfulness journal" class="product-image">
-                    <h3 class="product-title">Mindfulness & Reflection Journal</h3>
-                    <p class="product-description">
-                        Find peace in the chaos of daily life. This journal combines mindfulness exercises 
-                        with reflection prompts to help you stay grounded and present.
-                    </p>
-                    <ul class="product-features">
-                        <li>Guided meditation exercises</li>
-                        <li>Breathing technique instructions</li>
-                        <li>Daily mindfulness prompts</li>
-                        <li>Stress tracking and management tips</li>
-                        <li>Calming earth-tone design</li>
-                    </ul>
-                    <div class="product-price">$27.99</div>
-                    <a href="https://amazon.com" class="cta-button" target="_blank">
-                        View on Amazon
-                    </a>
-                </div>
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Meditation and mindfulness reflection journal in peaceful setting" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">Meditation & Self-Reflection Journal</h3>
+                        <p class="product-description">
+                            Find inner peace and clarity with this mindfulness journal combining meditation exercises, 
+                            self-reflection prompts, and spaces for personal growth insights.
+                        </p>
+                        <ul class="product-features">
+                            <li>Guided meditation exercises and breathing techniques</li>
+                            <li>Daily mindfulness prompts and awareness practices</li>
+                            <li>Emotional check-ins and stress management tools</li>
+                            <li>Self-compassion exercises and positive affirmations</li>
+                            <li>Calming earth-tone design with mindful typography</li>
+                        </ul>
+                        <div class="product-price">$27.99</div>
+                        <a href="https://amazon.com/dp/example5" class="cta-button" target="_blank">
+                            View on Amazon
+                        </a>
+                    </div>
+                </article>
 
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Travel journal with map and compass" class="product-image">
-                    <h3 class="product-title">Travel Adventure Log</h3>
-                    <p class="product-description">
-                        Document your journeys around the world with this compact travel journal. 
-                        Perfect for capturing experiences, local discoveries, and travel memories.
-                    </p>
-                    <ul class="product-features">
-                        <li>Compact size perfect for backpacks</li>
-                        <li>Weather-resistant cover</li>
-                        <li>Maps and itinerary pages</li>
-                        <li>Pocket for tickets and mementos</li>
-                        <li>Travel tip sections</li>
-                    </ul>
-                    <div class="product-price">$19.99</div>
-                    <a href="https://amazon.com" class="cta-button" target="_blank">
-                        View on Amazon
-                    </a>
-                </div>
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Travel adventure journal with world map and compass for documenting journeys" class="product-image">
+                    <div class="product-content">
+                        <h3 class="product-title">Travel Adventure Memory Book</h3>
+                        <p class="product-description">
+                            Document your adventures around the world with this travel journal designed for capturing 
+                            experiences, cultural discoveries, and unforgettable journey memories.
+                        </p>
+                        <ul class="product-features">
+                            <li>Compact size perfect for backpacks and carry-on luggage</li>
+                            <li>Weather-resistant cover and durable binding</li>
+                            <li>Trip planning pages, maps, and itinerary sections</li>
+                            <li>Expandable pocket for tickets, postcards, and mementos</li>
+                            <li>Travel tips, cultural notes, and reflection prompts</li>
+                        </ul>
+                        <div class="product-price">$19.99</div>
+                        <a href="https://amazon.com/dp/example6" class="cta-button" target="_blank">
+                            View on Amazon
+                        </a>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <section class="section">
-            <div class="why-journals">
-                <h2 class="section-title">Why Journaling Changes Everything</h2>
+        <!-- Benefits Section -->
+        <section class="benefits">
+            <div class="container">
+                <h2 class="section-title">Why Choose Journaling?</h2>
                 <p class="section-subtitle">
-                    Discover the life-transforming benefits of putting pen to paper
+                    Discover the scientifically-proven benefits of regular journaling for mental health, 
+                    personal growth, and emotional well-being
                 </p>
                 
                 <div class="benefits-grid">
                     <div class="benefit-item">
                         <div class="benefit-icon">🧠</div>
-                        <h3 class="benefit-title">Mental Clarity</h3>
+                        <h3 class="benefit-title">Enhanced Mental Clarity</h3>
                         <p class="benefit-description">
-                            Regular journaling helps organize thoughts, reduce anxiety, and improve 
-                            decision-making by providing a safe space to process emotions and experiences.
+                            Regular journaling helps organize thoughts, reduce anxiety, and improve decision-making 
+                            by providing a safe space to process emotions and experiences without judgment.
                         </p>
                     </div>
                     
                     <div class="benefit-item">
                         <div class="benefit-icon">🎯</div>
-                        <h3 class="benefit-title">Goal Achievement</h3>
+                        <h3 class="benefit-title">Improved Goal Achievement</h3>
                         <p class="benefit-description">
-                            Writing down goals makes you 42% more likely to achieve them. Track progress, 
-                            celebrate wins, and stay motivated on your journey to success.
+                            Studies show you're 42% more likely to achieve goals when written down. Track progress, 
+                            celebrate victories, and maintain motivation on your path to success.
                         </p>
                     </div>
                     
                     <div class="benefit-item">
                         <div class="benefit-icon">💝</div>
-                        <h3 class="benefit-title">Precious Legacy</h3>
+                        <h3 class="benefit-title">Meaningful Legacy Creation</h3>
                         <p class="benefit-description">
-                            Your journal becomes a priceless gift for future generations—a window into 
-                            your thoughts, dreams, and the world as you experienced it.
+                            Your journal becomes a priceless gift for future generations—a window into your thoughts, 
+                            dreams, and experiences that preserves your unique perspective for years to come.
                         </p>
                     </div>
                     
                     <div class="benefit-item">
                         <div class="benefit-icon">🌱</div>
-                        <h3 class="benefit-title">Personal Growth</h3>
+                        <h3 class="benefit-title">Accelerated Personal Growth</h3>
                         <p class="benefit-description">
-                            Track patterns, identify growth opportunities, and celebrate progress. 
-                            Journaling provides valuable insights into your personal development journey.
+                            Identify patterns, track emotional triggers, and celebrate progress. Journaling provides 
+                            valuable insights into your personal development and helps build self-awareness.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="section">
-            <div class="testimonials">
-                <h2 class="section-title" style="color: white;">What Our Customers Say</h2>
-                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">
-                    Real stories from people whose lives have been transformed by journaling
-                </p>
-                
-                <div class="testimonial-grid">
-                    <div class="testimonial">
-                        <p class="testimonial-text">
-                            "The Legacy Journal has become my most treasured possession. I'm documenting 
-                            stories for my grandchildren, and the quality is absolutely beautiful. 
-                            It feels like I'm creating a family heirloom."
-                        </p>
-                        <p class="testimonial-author">— Sarah M., California</p>
-                    </div>
-                    
-                    <div class="testimonial">
-                        <p class="testimonial-text">
-                            "I never thought I was a 'journal person' until I tried the Gratitude Companion. 
-                            It's completely changed my perspective. I wake up happier and sleep more peacefully."
-                        </p>
-                        <p class="testimonial-author">— Michael T., New York</p>
-                    </div>
-                    
-                    <div class="testimonial">
-                        <p class="testimonial-text">
-                            "The Dreams & Goals Planner helped me finally launch my business. Having everything 
-                            written down and tracked made my dreams feel real and achievable. I can't recommend it enough!"
-                        </p>
-                        <p class="testimonial-author">— Jennifer L., Texas</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <div class="footer-content">
-                <p>
-                    <strong>Legacy and Life Journals</strong> is dedicated to helping people capture life's 
-                    most precious moments and create meaningful legacies for future generations.
-                </p>
-                <p style="margin-top: 20px; font-size: 0.9rem;">
-                    &copy; 2025 Legacy and Life Journals. All rights reserved.
-                </p>
-                <p style="margin-top: 10px; font-size: 0.8rem;">
-                    As an Amazon Associate, we earn from qualifying purchases.
-                </p>
-            </div>
-        </footer>
     </div>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>
+                    <strong>Legacy & Life Journals</strong> is committed to helping people capture life's 
+                    precious moments and create meaningful legacies through the transformative practice of journaling.
+                </p>
+                <p>
+                    We believe every story deserves to be told, every dream deserves to be documented, 
+                    and every journey deserves to be remembered.
+                </p>
+                <p class="footer-small">
+                    &copy; 2025 Legacy & Life Journals. All rights reserved.
+                </p>
+                <p class="footer-small">
+                    As an Amazon Associate, we earn from qualifying purchases. 
+                    Free shipping on orders over $50.
+                </p>
+            </div>
+        </div>
+    </footer>
+
     <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+        // Enhanced SEO and User Experience
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
                 });
             });
-        });
 
-        // Animate elements on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -20px 0px'
+            };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
 
-        // Apply animation to cards
-        document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.product-card, .benefit-item, .testimonial');
-            
-            cards.forEach((card, index) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                card.style.transition = 'all 0.6s ease';
-                
-                observer.observe(card);
+            // Animate product cards and benefit items
+            const animatedElements = document.querySelectorAll('.product-card, .benefit-item, .about-content');
+            animatedElements.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = `all 0.6s ease ${index * 0.1}s`;
+                observer.observe(element);
             });
 
-            // Track CTA clicks
+            // Track CTA clicks for analytics
             document.querySelectorAll('.cta-button, .cta-primary').forEach(button => {
                 button.addEventListener('click', function(e) {
-                    // Analytics tracking can be added here
+                    // Analytics tracking would go here
                     console.log('CTA clicked:', this.href);
                     
                     // Visual feedback
-                    this.style.transform = 'scale(0.95)';
+                    this.style.transform = 'scale(0.98)';
                     setTimeout(() => {
                         this.style.transform = 'scale(1)';
-                    }, 150);
+                    }, 100);
+                });
+            });
+
+            // Enhanced product card interactions
+            document.querySelectorAll('.product-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
                 });
             });
         });
 
-        // Add floating effect to product cards
-        document.querySelectorAll('.product-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-15px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
+        // Schema.org structured data for products (for better SEO)
+        const productSchema = {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "Product",
+                    "name": "Heritage Leather Journal",
+                    "description": "Premium leather-bound journal for family stories and legacy preservation",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "45.99",
+                        "priceCurrency": "USD"
+                    }
+                }
+                // More products would be added here
+            ]
+        };
     </script>
 </body>
 </html>
