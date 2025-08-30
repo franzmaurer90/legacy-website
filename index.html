@@ -800,25 +800,29 @@
         };
     </script>
 
-// Newsletter signup
-        function handleNewsletter() {
-            const email = document.getElementById('newsletter-email').value;
-            const consent = document.getElementById('newsletter-consent').checked;
-            
-            if (!email || !email.includes('@')) {
-                alert('Please enter a valid email address');
-                return;
-            }
-            
-            if (!consent) {
-                alert('Please agree to receive newsletter updates');
-                return;
-            }
-            
-            alert('Thank you for subscribing!');
-            document.getElementById('newsletter-email').value = '';
-            document.getElementById('newsletter-consent').checked = false;
-        }
+// Newsletter signup - redirect to Google Form
+function handleNewsletter() {
+    const email = document.getElementById('newsletter-email').value;
+    const consent = document.getElementById('newsletter-consent').checked;
+    
+    if (!email || !email.includes('@')) {
+        alert('Please enter a valid email address');
+        return;
+    }
+    
+    if (!consent) {
+        alert('Please agree to receive newsletter updates');
+        return;
+    }
+    
+    // Redirect to Google Form with pre-filled email
+    const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdnj31Ti85zy_XKH5jC8GaVvR51BlHHsolS-BBqFyGppFlegg/viewform';
+    window.open(googleFormUrl, '_blank');
+    
+    // Clear form
+    document.getElementById('newsletter-email').value = '';
+    document.getElementById('newsletter-consent').checked = false;
+}
 </body>
 </html>
 
