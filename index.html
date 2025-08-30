@@ -641,7 +641,7 @@
 
     <!-- Footer -->
 
-    <!-- Newsletter Section -->
+<!-- Newsletter Section -->
         <section style="background: var(--white); border-top: 1px solid #ecf0f1; border-bottom: 1px solid #ecf0f1; padding: 80px 0; margin: 100px 0;">
             <div class="container">
                 <div style="max-width: 600px; margin: 0 auto; text-align: center;">
@@ -649,25 +649,40 @@
                         Stay Updated on New Arrivals
                     </h2>
                     <p style="color: #7f8c8d; margin-bottom: 40px; font-size: 1.1rem; line-height: 1.6;">
-                        Be the first to discover new journal designs, mindfulness tips, and exclusive offers. 
-                        Join our community of mindful writers.
+                        Be the first to discover new journal designs, mindfulness tips, and exclusive offers.
                     </p>
                     
-                    <div style="display: flex; max-width: 400px; margin: 0 auto; gap: 0; border: 1px solid #ecf0f1; border-radius: 3px; overflow: hidden;">
-                        <input 
-                            type="email" 
-                            placeholder="Enter your email address" 
-                            style="flex: 1; padding: 15px 20px; border: none; font-size: 1rem; background: white; color: #2c3e50; outline: none;"
-                            id="newsletter-email"
-                        >
-                        <button 
-                            type="submit" 
-                            style="background: #2c3e50; color: white; border: none; padding: 15px 25px; font-size: 1rem; cursor: pointer; font-weight: 400; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s ease;"
-                            onclick="handleNewsletter()"
-                        >
-                            Subscribe
-                        </button>
+                    <div style="max-width: 400px; margin: 0 auto;">
+                        <div style="display: flex; gap: 0; border: 1px solid #ecf0f1; border-radius: 3px; overflow: hidden; margin-bottom: 20px;">
+                            <input 
+                                type="email" 
+                                placeholder="Enter your email address" 
+                                style="flex: 1; padding: 15px 20px; border: none; font-size: 1rem; background: white; color: #2c3e50; outline: none;"
+                                id="newsletter-email"
+                            >
+                            <button 
+                                type="submit" 
+                                style="background: #2c3e50; color: white; border: none; padding: 15px 25px; font-size: 1rem; cursor: pointer; font-weight: 400; text-transform: uppercase; letter-spacing: 0.5px;"
+                                onclick="handleNewsletter()"
+                            >
+                                Subscribe
+                            </button>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px; text-align: left;">
+                            <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: 0.9rem; color: #7f8c8d; line-height: 1.5;">
+                                <input type="checkbox" id="newsletter-consent" style="margin-top: 2px;">
+                                <span>I agree to receive newsletter updates and understand I can unsubscribe at any time.</span>
+                            </label>
+                        </div>
                     </div>
+                    
+                    <p style="font-size: 0.85rem; color: #7f8c8d;">
+                        No spam guarantee. Unsubscribe anytime.
+                    </p>
+                </div>
+            </div>
+        </section>
                     
                     <p style="font-size: 0.85rem; color: #7f8c8d; margin-top: 20px;">
                         No spam, unsubscribe at any time. Privacy protected.
@@ -788,15 +803,22 @@
 // Newsletter signup
         function handleNewsletter() {
             const email = document.getElementById('newsletter-email').value;
+            const consent = document.getElementById('newsletter-consent').checked;
             
             if (!email || !email.includes('@')) {
                 alert('Please enter a valid email address');
                 return;
             }
             
+            if (!consent) {
+                alert('Please agree to receive newsletter updates');
+                return;
+            }
+            
             alert('Thank you for subscribing!');
             document.getElementById('newsletter-email').value = '';
-        }    
+            document.getElementById('newsletter-consent').checked = false;
+        }
 </body>
 </html>
 
